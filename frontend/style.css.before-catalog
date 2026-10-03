@@ -1,0 +1,634 @@
+/* =========================================================
+   ODIN — Jewelry · Objects · Craft
+   Visual Foundation
+   ========================================================= */
+
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(120, 105, 70, 0.08),
+            transparent 35%
+        ),
+        #0b0b0a;
+
+    color: #d8d2c4;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    line-height: 1.6;
+}
+
+
+/* ---------- GLOBAL ---------- */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+::selection {
+    background: #b7a77b;
+    color: #0b0b0a;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 32px 6vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 10;
+}
+
+.brand {
+    font-family:
+        "Times New Roman",
+        Georgia,
+        serif;
+
+    font-size: 1.1rem;
+    letter-spacing: 0.35em;
+
+    color: #c8b98b;
+
+    transition: opacity 0.3s ease;
+}
+
+.brand:hover {
+    opacity: 0.65;
+}
+
+.site-nav {
+    display: flex;
+    gap: 32px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    color: #aaa396;
+}
+
+.site-nav a {
+    transition:
+        color 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.site-nav a:hover {
+    color: #d5c79b;
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero {
+    min-height: 100vh;
+
+    padding:
+        160px 6vw
+        100px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* subtle atmospheric ring */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: min(650px, 80vw);
+    height: min(650px, 80vw);
+
+    border: 1px solid rgba(170, 150, 100, 0.10);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: min(520px, 65vw);
+    height: min(520px, 65vw);
+
+    border: 1px solid rgba(170, 150, 100, 0.05);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* ---------- SYMBOL ---------- */
+
+.hero-symbol {
+    width: 92px;
+    height: 92px;
+
+    margin-bottom: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(190, 170, 115, 0.5);
+
+    border-radius: 50%;
+
+    color: #c5b583;
+
+    font-size: 1.8rem;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.hero-symbol::before,
+.hero-symbol::after {
+    content: "";
+
+    position: absolute;
+
+    border: 1px solid rgba(190, 170, 115, 0.18);
+
+    border-radius: 50%;
+}
+
+.hero-symbol::before {
+    inset: -9px;
+}
+
+.hero-symbol::after {
+    inset: -18px;
+}
+
+
+/* ---------- EYEBROW ---------- */
+
+.eyebrow {
+    margin-bottom: 20px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.35em;
+
+    text-transform: uppercase;
+
+    color: #a99b78;
+}
+
+
+/* ---------- HERO TITLE ---------- */
+
+.hero h1 {
+    font-size:
+        clamp(5rem, 15vw, 12rem);
+
+    font-weight: 400;
+
+    letter-spacing: 0.12em;
+
+    line-height: 0.85;
+
+    color: #ddd7c9;
+
+    text-shadow:
+        0 0 40px rgba(190, 170, 115, 0.08);
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* ---------- HERO DESCRIPTION ---------- */
+
+.hero-description {
+    max-width: 440px;
+
+    margin-top: 34px;
+
+    color: #918d83;
+
+    font-size: 1rem;
+
+    font-style: italic;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ---------- HERO LINK ---------- */
+
+.hero-link {
+    margin-top: 42px;
+
+    padding:
+        13px 25px;
+
+    border: 1px solid rgba(190, 170, 115, 0.4);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.22em;
+
+    text-transform: uppercase;
+
+    color: #c5b583;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+
+    position: relative;
+    z-index: 1;
+}
+
+.hero-link:hover {
+    background: #c5b583;
+
+    border-color: #c5b583;
+
+    color: #0b0b0a;
+}
+
+
+/* ---------- COLLECTION ---------- */
+
+.collection-section {
+    padding:
+        150px 6vw
+        180px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.06);
+}
+
+.section-heading {
+    margin-bottom: 70px;
+
+    max-width: 700px;
+}
+
+.section-heading h2 {
+    font-size:
+        clamp(2.5rem, 6vw, 5rem);
+
+    font-weight: 400;
+
+    color: #d7d0c2;
+}
+
+
+/* ---------- JEWELRY GRID ---------- */
+
+.jewelry-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.jewelry-card {
+    cursor: pointer;
+}
+
+.image-placeholder {
+    aspect-ratio: 4 / 5;
+
+    background:
+        linear-gradient(
+            145deg,
+            #191917,
+            #0f0f0e
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.07);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #665f50;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.2em;
+
+    transition:
+        transform 0.5s ease,
+        border-color 0.5s ease;
+}
+
+.jewelry-card:hover .image-placeholder {
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(190, 170, 115, 0.35);
+}
+
+.card-info {
+    padding-top: 18px;
+}
+
+.card-info h3 {
+    font-size: 1.25rem;
+
+    font-weight: 400;
+
+    color: #d0c9bb;
+}
+
+.card-info p {
+    margin-top: 4px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    color: #77736a;
+}
+
+
+/* ---------- ABOUT ---------- */
+
+.about-section {
+    padding:
+        180px 12vw;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.06);
+
+    text-align: center;
+}
+
+.about-section h2 {
+    max-width: 900px;
+
+    margin:
+        0 auto 40px;
+
+    font-size:
+        clamp(2.8rem, 7vw, 6rem);
+
+    line-height: 1;
+
+    font-weight: 400;
+
+    color: #d7d0c2;
+}
+
+.about-section > p:last-child {
+    max-width: 560px;
+
+    margin: auto;
+
+    color: #89857c;
+
+    font-style: italic;
+}
+
+
+/* ---------- JOURNAL ---------- */
+
+.journal-section {
+    min-height: 50vh;
+
+    padding:
+        120px 6vw;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.06);
+}
+
+.journal-section h2 {
+    font-size:
+        clamp(2.5rem, 6vw, 5rem);
+
+    font-weight: 400;
+
+    color: #d7d0c2;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.site-footer {
+    padding:
+        35px 6vw;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.06);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.6rem;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+
+    color: #66635c;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 800px) {
+
+    .site-header {
+        padding: 24px;
+    }
+
+    .site-nav {
+        gap: 15px;
+        font-size: 0.55rem;
+    }
+
+    .hero {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .jewelry-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .collection-section,
+    .journal-section {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .about-section {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .site-footer {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+/* Runes of Odin — responsive brand sizing */
+
+.brand {
+    font-size: clamp(0.72rem, 1.5vw, 1.05rem);
+    letter-spacing: 0.18em;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+
+    .site-header {
+        padding: 22px 18px;
+    }
+
+    .brand {
+        font-size: 0.72rem;
+        letter-spacing: 0.10em;
+    }
+
+    .site-nav {
+        gap: 10px;
+        font-size: 0.48rem;
+        letter-spacing: 0.10em;
+    }
+
+}
+
+/* Runes of Odin — responsive brand sizing */
+
+.brand {
+    font-size: clamp(0.72rem, 1.5vw, 1.05rem);
+    letter-spacing: 0.18em;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+
+    .site-header {
+        padding: 22px 18px;
+    }
+
+    .brand {
+        font-size: 0.72rem;
+        letter-spacing: 0.10em;
+    }
+
+    .site-nav {
+        gap: 10px;
+        font-size: 0.48rem;
+        letter-spacing: 0.10em;
+    }
+
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 10vw, 9rem);
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: clamp(2.2rem, 12vw, 4.5rem);
+        letter-spacing: 0.03em;
+    }
+
+}

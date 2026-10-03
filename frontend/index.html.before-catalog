@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Runes of Odin — Jewelry · Objects · Craft</title>
+
+    <meta
+        name="description"
+        content="A collection of jewelry, objects, and crafted pieces."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="/" class="brand">Runes of Odin</a>
+
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="#collections">Collections</a>
+            <a href="#about">About</a>
+            <a href="#journal">Journal</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-symbol" aria-hidden="true">
+                ◉
+            </div>
+
+            <p class="eyebrow">
+                JEWELRY · OBJECTS · CRAFT
+            </p>
+
+            <h1>Runes of Odin</h1>
+
+            <p class="hero-description">
+                Objects forged with character, history, and intent.
+            </p>
+
+            <a href="#collections" class="hero-link">
+                Explore Collection
+            </a>
+
+        </section>
+
+
+        <section id="collections" class="collection-section">
+
+            <div class="section-heading">
+                <p class="eyebrow">THE COLLECTION</p>
+                <h2>Selected Objects</h2>
+            </div>
+
+            <div class="jewelry-grid">
+
+                <article class="jewelry-card">
+                    <div class="image-placeholder">
+                        <span>01</span>
+                    </div>
+
+                    <div class="card-info">
+                        <h3>Raven Ring</h3>
+                        <p>Silver · Handcrafted</p>
+                    </div>
+                </article>
+
+
+                <article class="jewelry-card">
+                    <div class="image-placeholder">
+                        <span>02</span>
+                    </div>
+
+                    <div class="card-info">
+                        <h3>Odin Pendant</h3>
+                        <p>Blackened Silver · One of One</p>
+                    </div>
+                </article>
+
+
+                <article class="jewelry-card">
+                    <div class="image-placeholder">
+                        <span>03</span>
+                    </div>
+
+                    <div class="card-info">
+                        <h3>Mjölnir</h3>
+                        <p>Forged Metal · Handcrafted</p>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section id="about" class="about-section">
+
+            <p class="eyebrow">THE HOUSE</p>
+
+            <h2>
+                Made for those who
+                carry their own story.
+            </h2>
+
+            <p>
+                Jewelry is more than an object.
+                It carries memory, symbolism, craftsmanship,
+                and the hands that shaped it.
+            </p>
+
+        </section>
+
+
+        <section id="journal" class="journal-section">
+
+            <p class="eyebrow">JOURNAL</p>
+
+            <h2>Craft · History · Myth</h2>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <span>Runes of Odin</span>
+
+        <span>
+            Jewelry · Objects · Craft
+        </span>
+
+    </footer>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
