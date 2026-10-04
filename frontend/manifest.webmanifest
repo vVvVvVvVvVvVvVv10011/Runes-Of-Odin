@@ -1,0 +1,12 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "name": "Runes of Odin",
+  "short_name": "Runes of Odin",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#0b0a08",
+  "background_color": "#0b0a08"
+}
